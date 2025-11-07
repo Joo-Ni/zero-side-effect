@@ -1,0 +1,616 @@
+getFoodNtrCpntDbInq02_response{
+header	{
+description:	
+header
+
+resultCode	string
+결과코드
+
+resultMsg	string
+결과메세지
+
+}
+body	{
+description:	
+body
+
+items	{
+description:	
+items
+
+item	{
+description:	
+item
+
+AMT_NUM59	string
+타가토스(g)
+
+NUM	string
+번호
+
+FOOD_CD	string
+식품코드
+
+FOOD_NM_KR	string
+식품명
+
+DB_GRP_CM	string
+데이터구분코드
+
+DB_GRP_NM	string
+데이터구분명
+
+DB_CLASS_CM	string
+품목대표/상용제품 코드
+
+DB_CLASS_NM	string
+품목대표/상용제품
+
+FOOD_OR_CD	string
+식품기원코드
+
+FOOD_OR_NM	string
+식품기원명
+
+FOOD_CAT1_CD	string
+식품대분류코드
+
+FOOD_CAT1_NM	string
+식품대분류명
+
+FOOD_REF_CD	string
+대표식품코드
+
+FOOD_REF_NM	string
+대표식품명
+
+FOOD_CAT2_CD	string
+식품중분류코드
+
+FOOD_CAT2_NM	string
+식품중분류명
+
+FOOD_CAT3_CD	string
+식품소분류코드
+
+FOOD_CAT3_NM	string
+식품소분류명
+
+FOOD_CAT4_CD	string
+식품세분류코드
+
+FOOD_CAT4_NM	string
+식품세분류명
+
+SERVING_SIZE	string
+영양성분함량기준량
+
+AMT_NUM1	string
+에너지(kcal)
+
+AMT_NUM2	string
+수분(g)
+
+AMT_NUM3	string
+단백질(g)
+
+AMT_NUM4	string
+지방(g)
+
+AMT_NUM5	string
+회분(g)
+
+AMT_NUM6	string
+탄수화물(g)
+
+AMT_NUM7	string
+당류(g)
+
+AMT_NUM8	string
+식이섬유(g)
+
+AMT_NUM9	string
+칼슘(mg)
+
+AMT_NUM10	string
+철(mg)
+
+AMT_NUM11	string
+인(mg)
+
+AMT_NUM12	string
+칼륨(mg)
+
+AMT_NUM13	string
+나트륨(mg)
+
+AMT_NUM14	string
+비타민 A(μg RAE)
+
+AMT_NUM15	string
+비타민 A(μg)
+
+AMT_NUM16	string
+레티놀(μg)
+
+AMT_NUM17	string
+베타카로틴(μg)
+
+AMT_NUM18	string
+비타민 B1(mg)
+
+AMT_NUM19	string
+비타민 B2(mg)
+
+AMT_NUM20	string
+니아신(mg)
+
+AMT_NUM21	string
+비타민 C(mg)
+
+AMT_NUM22	string
+비타민 D(μg)
+
+AMT_NUM23	string
+콜레스테롤(mg)
+
+AMT_NUM24	string
+포화지방산(g)
+
+AMT_NUM25	string
+트랜스지방산(g)
+
+AMT_NUM26	string
+니코틴산 (mg)
+
+AMT_NUM27	string
+니코틴아마이드(mg)
+
+AMT_NUM28	string
+비오틴(μg)
+
+AMT_NUM29	string
+비타민 B6 (mg)
+
+AMT_NUM30	string
+비타민 B12(μg)
+
+AMT_NUM31	string
+엽산(DFE)(㎍)
+
+AMT_NUM32	string
+콜린(mg)
+
+AMT_NUM33	string
+판토텐산(mg)
+
+AMT_NUM34	string
+비타민 D2(μg)
+
+AMT_NUM35	string
+비타민 D3(μg)
+
+AMT_NUM36	string
+비타민 E(mg α-TE)
+
+AMT_NUM37	string
+비타민 E(mg)
+
+AMT_NUM38	string
+토코페롤(㎎)
+
+AMT_NUM39	string
+알파 토코페롤(mg)
+
+AMT_NUM40	string
+베타 토코페롤(mg)
+
+AMT_NUM41	string
+감마 토코페롤(mg)
+
+AMT_NUM42	string
+델타 토코페롤(mg)
+
+AMT_NUM43	string
+토코트리에놀(㎎)
+
+AMT_NUM44	string
+알파 토코트리에놀(mg)
+
+AMT_NUM45	string
+베타 토코트리에놀(mg)
+
+AMT_NUM46	string
+감마 토코트리에놀(mg)
+
+AMT_NUM47	string
+델타 토코트리에놀(mg)
+
+AMT_NUM48	string
+비타민 K(μg)
+
+AMT_NUM49	string
+비타민 K1(μg)
+
+AMT_NUM50	string
+비타민 K2(μg)
+
+AMT_NUM51	string
+갈락토오스(g)
+
+AMT_NUM52	string
+과당(g)
+
+AMT_NUM53	string
+당알콜(g)
+
+AMT_NUM54	string
+맥아당(g)
+
+AMT_NUM55	string
+알룰로오스(g)
+
+AMT_NUM56	string
+에리스리톨(g)
+
+AMT_NUM57	string
+유당(g)
+
+AMT_NUM58	string
+자당(g)
+
+SUB_REF_NAME	string
+출처명
+
+NUTRI_AMOUNT_SERVING	string
+1회 섭취참고량
+
+Z10500	string
+식품중량
+
+DISH_ONE_SERVING	string
+1회분량 참고량
+
+ITEM_REPORT_NO	string
+품목제조보고번호
+
+MAKER_NM	string
+업체명
+
+IMP_MANUFAC_NM	string
+수입업체명
+
+SELLER_MANUFAC_NM	string
+유통업체명
+
+IMP_YN	string
+수입여부
+
+NATION_CM	string
+원산지국코드
+
+NATION_NM	string
+원산지국명
+
+CRT_MTH_CD	string
+데이터생성방법코드
+
+CRT_MTH_NM	string
+데이터생성방법명
+
+SUB_REF_CM	string
+출처코드
+
+AMT_NUM126	string
+루신(mg)
+
+AMT_NUM127	string
+메티오닌(mg)
+
+AMT_NUM128	string
+발린(mg)
+
+AMT_NUM129	string
+세린(mg)
+
+AMT_NUM130	string
+시스테인(mg)
+
+AMT_NUM131	string
+아르기닌(mg)
+
+AMT_NUM132	string
+아스파르트산(mg)
+
+AMT_NUM133	string
+알라닌(mg)
+
+AMT_NUM134	string
+이소루신(mg)
+
+AMT_NUM135	string
+타우린(mg)
+
+AMT_NUM136	string
+트레오닌(mg)
+
+AMT_NUM137	string
+트립토판(mg)
+
+AMT_NUM138	string
+티로신(mg)
+
+AMT_NUM139	string
+페닐알라닌(mg)
+
+AMT_NUM140	string
+프롤린(mg)
+
+AMT_NUM141	string
+히스티딘(mg)
+
+AMT_NUM142	string
+펜타데센산(15:1,n-5)(mg)
+
+AMT_NUM143	string
+에이코사테트라에노산(20:4(n-3))
+
+AMT_NUM144	string
+헤니코사펜타엔산(21:5,n-3)(mg)
+
+AMT_NUM145	string
+니아신당량(NE)
+
+AMT_NUM146	string
+수용성 식이섬유(g)
+
+AMT_NUM147	string
+불용성 식이섬유(g)
+
+AMT_NUM148	string
+피리독신(mg)
+
+AMT_NUM149	string
+엽산_식품 엽산(μg)
+
+AMT_NUM150	string
+엽산_합성 엽산(μg)
+
+AMT_NUM151	string
+총 필수지방산(g)
+
+AMT_NUM152	string
+총 단일불포화지방산(g)
+
+AMT_NUM153	string
+총 다중불포화지방산(g)
+
+AMT_NUM154	string
+총 지방산(g)
+
+AMT_NUM155	string
+지방산의 합(g)
+
+AMT_NUM156	string
+식염상당량(g)
+
+AMT_NUM157	string
+폐기율(%)
+
+AMT_NUM60	string
+포도당(g)
+
+AMT_NUM61	string
+총 불포화지방산(g)
+
+AMT_NUM62	string
+EPA와 DHA의 합(mg)
+
+AMT_NUM63	string
+가돌레산/에이코센산(mg)
+
+AMT_NUM64	string
+감마 리놀렌산(18:3 n-6)(mg)
+
+AMT_NUM65	string
+네르본산(24:1)(mg)
+
+AMT_NUM66	string
+도코사디에노산(22:2)(mg)
+
+AMT_NUM67	string
+도코사펜타에노산(22:5(n-3))(mg)
+
+AMT_NUM68	string
+도코사펜타엔산(n-6) (22:5,n-6)(mg)
+
+AMT_NUM69	string
+도코사헥사에노산(22:6(n-3))(mg)
+
+AMT_NUM70	string
+디호모리놀렌산(20:3(n-3))(mg)
+
+AMT_NUM71	string
+디호모감마리놀렌산(20:3,n-6))(mg)
+
+AMT_NUM72	string
+라우르산(12:0)(mg)
+
+AMT_NUM73	string
+리그노세르산(24:0)(mg)
+
+AMT_NUM74	string
+리놀레산(18:2(n-6)c)(g)
+
+AMT_NUM75	string
+리놀레산(18:2(n-6)c)(mg)
+
+AMT_NUM76	string
+미리스톨레산(14:1)(mg)
+
+AMT_NUM77	string
+미리스트산(14:0)(mg)
+
+AMT_NUM78	string
+박센산(18:1(n-7))(mg)
+
+AMT_NUM79	string
+베헨산(22:0)(mg)
+
+AMT_NUM80	string
+부티르산(4:0)(mg)
+
+AMT_NUM81	string
+스테아르산(18:0)(mg)
+
+AMT_NUM82	string
+스테아리돈산(18:4)(mg)
+
+AMT_NUM83	string
+아라키돈산(20:4 n-6)(mg)
+
+AMT_NUM84	string
+아라키드산(20:0)(mg)
+
+AMT_NUM85	string
+알파 리놀렌산(18:3(n-3))(g)
+
+AMT_NUM86	string
+알파 리놀렌산(18:3(n-3))(mg)
+
+AMT_NUM87	string
+에루크산(22:1)(mg)
+
+AMT_NUM88	string
+에이코사디에노산(20:2(n-6))(mg)
+
+AMT_NUM89	string
+에이코사트리에노산(20:3(n-6))(mg)
+
+AMT_NUM90	string
+에이코사펜타에노산(20:5(n-3))(mg)
+
+AMT_NUM91	string
+오메가3 지방산(g)
+
+AMT_NUM92	string
+오메가6 지방산(g)
+
+AMT_NUM93	string
+올레산(18:1 n-9)(mg)
+
+AMT_NUM94	string
+카프로산(6:0)(mg)
+
+AMT_NUM95	string
+카프르산(10:0)(mg)
+
+AMT_NUM96	string
+카프릴산(8:0)(mg)
+
+AMT_NUM97	string
+트라이데칸산(13:0)(mg)
+
+AMT_NUM98	string
+트랜스 리놀레산(18:2t)(mg)
+
+AMT_NUM99	string
+트랜스 리놀렌산(18:3t)(mg)
+
+AMT_NUM100	string
+카페인(㎎)
+
+AMT_NUM101	string
+트랜스 올레산(18:1(n-9)t)(mg)
+
+AMT_NUM102	string
+트리코산산(23:0)(mg)
+
+AMT_NUM103	string
+팔미톨레산(16:1)(mg)
+
+AMT_NUM104	string
+팔미트산(16:0)(mg)
+
+AMT_NUM105	string
+펜타데칸산(15:0)(mg)
+
+AMT_NUM106	string
+헨에이코산산(21:0)(mg)
+
+AMT_NUM107	string
+헵타데센산(17:1)(mg)
+
+AMT_NUM108	string
+헵타데칸산(17:0)(mg)
+
+AMT_NUM109	string
+구리(㎎)
+
+AMT_NUM110	string
+구리(μg)
+
+AMT_NUM111	string
+마그네슘(mg)
+
+AMT_NUM112	string
+망간(mg)
+
+AMT_NUM113	string
+몰리브덴(μg)
+
+AMT_NUM114	string
+불소(mg)
+
+AMT_NUM115	string
+셀레늄(μg)
+
+AMT_NUM116	string
+아연(mg)
+
+AMT_NUM117	string
+염소(mg)
+
+AMT_NUM118	string
+요오드(μg)
+
+AMT_NUM119	string
+크롬(μg)
+
+AMT_NUM120	string
+총 아미노산(mg)
+
+AMT_NUM121	string
+필수아미노산(mg)
+
+AMT_NUM122	string
+비필수아미노산(mg)
+
+AMT_NUM123	string
+글루탐산(mg)
+
+AMT_NUM124	string
+글리신(mg)
+
+AMT_NUM125	string
+라이신(mg)
+
+RESEARCH_YMD	string
+데이터생성일자
+
+UPDATE_DATE	string
+데이터수정일자
+
+}
+}
+numOfRows	string
+한 페이지 결과수
+
+pageNo	string
+페이지 번호
+
+totalCount	string
+전체 결과 수
+
+}
+}
