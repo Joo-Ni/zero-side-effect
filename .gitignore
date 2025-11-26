@@ -241,3 +241,4 @@ settings.py
 # dataset
 models/
 dataset_naver/
+filtered_dataset/
