@@ -241,8 +241,8 @@ settings.py
 
 # dataset
 ignore/
+zero_side_effect.sql
 
 # backend inference model weights
 *.keras
-*.tflite
 *.h5
