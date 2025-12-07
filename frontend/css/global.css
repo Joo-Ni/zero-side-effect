@@ -1,0 +1,329 @@
+/* 기본 리셋 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+    "Noto Sans KR", system-ui, sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+/* 레이아웃 */
+.zse-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 헤더 / 로고 / 네비 */
+.zse-header {
+  padding-top: 32px;
+}
+
+.zse-logo-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.zse-logo {
+  height: 160px;
+  object-fit: contain;
+}
+
+.zse-nav {
+  margin-top: 16px;
+  border-bottom: 1px solid #222;
+}
+
+.zse-nav-list {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  list-style: none;
+  padding: 12px 0;
+}
+
+.zse-nav-item {
+  position: relative;
+  cursor: pointer;
+  font-size: 16px;
+  color: #aaa;
+  padding-bottom: 8px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.zse-nav-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 0;
+  height: 2px;
+  background: #f97316;
+  transition: width 0.2s ease;
+}
+
+.zse-nav-item:hover {
+  color: #fff;
+}
+
+.zse-nav-item:hover::after {
+  width: 100%;
+}
+
+.zse-nav-item.active {
+  color: #f97316;
+}
+
+.zse-nav-item.active::after {
+  width: 100%;
+}
+
+/* 서브메뉴 */
+.zse-submenu-wrapper {
+  position: relative;
+}
+
+.zse-submenu {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: none;
+  justify-content: center;
+  gap: 40px;
+  padding: 14px 0 14px;
+  border-bottom: 1px solid #222;
+  background-color: #000;
+  z-index: 30;
+}
+
+.zse-submenu.visible {
+  display: flex;
+}
+
+.zse-submenu-item {
+  cursor: pointer;
+  font-size: 14px;
+  color: #fff;
+  position: relative;
+  padding-bottom: 4px;
+  background: none;
+  border: none;
+}
+
+.zse-submenu-item:hover {
+  color: #f97316;
+}
+
+@media (max-width: 768px) {
+  .zse-submenu {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 0;
+  }
+
+  .zse-submenu-item {
+    font-size: 16px;
+  }
+}
+
+/* 메인 / 공통 섹션 */
+.zse-main {
+  flex: 1;
+  padding: 32px 40px 64px;
+}
+
+.zse-content-section {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* 제품 카드 그리드 공통 */
+.zse-product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 24px;
+}
+
+.zse-product-card {
+  background-color: #050505;
+  border-radius: 16px;
+  padding: 14px 14px 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+.zse-product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6);
+}
+
+.zse-card-thumb {
+  width: 100%;
+  height: 220px;
+  border-radius: 14px;
+  background: radial-gradient(circle at 20% 20%, #333, #111);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.zse-card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 태그 */
+.zse-tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.zse-tag {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background-color: #222;
+  color: #000;
+}
+
+.zse-tag-allulose {
+  background-color: #ffe680;
+}
+
+.zse-tag-erythritol {
+  background-color: #9fe3ff;
+}
+
+.zse-tag-polyol {
+  background-color: #d7b5ff;
+}
+
+/* 제품명 */
+.zse-card-name {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.3;
+  max-height: 3.6em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 공통 유틸 */
+.zse-empty-message {
+  margin-top: 40px;
+  text-align: center;
+  color: #777;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* 공통 영양 카드 */
+.zse-nutrition-card {
+  background-color: #0d0d0d;
+  border-radius: 12px;
+  padding: 12px 14px;
+  border: 1px solid #222;
+  font-size: 13px;
+}
+
+.zse-nutrition-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-bottom: 1px solid #1b1b1b;
+}
+
+.zse-nutrition-row:last-child {
+  border-bottom: none;
+}
+
+/* 공통 모달 */
+.zse-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.zse-modal {
+  background-color: #050505;
+  border-radius: 18px;
+  padding: 28px 28px 26px;
+  max-width: 780px;
+  width: 90%;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.9);
+  position: relative;
+}
+
+.zse-modal-close {
+  position: absolute;
+  right: 18px;
+  top: 14px;
+  border: none;
+  background: transparent;
+  color: #aaa;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.zse-modal-close:hover {
+  color: #fff;
+}
+
+.zse-modal-body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 푸터 */
+.zse-footer {
+  text-align: center;
+  padding: 16px 0 20px;
+  font-size: 12px;
+  color: #777;
+}
+
+@media (max-width: 768px) {
+  .zse-main {
+    padding: 24px 16px 40px;
+  }
+
+  .zse-nav-list {
+    gap: 28px;
+  }
+}
+
+/* 썸네일 이미지 공통 */
+.zse-card-thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

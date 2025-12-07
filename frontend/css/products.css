@@ -1,0 +1,239 @@
+/* 검색 섹션 */
+.zse-search-section {
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.zse-search-inner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.zse-search-box {
+  position: relative;
+}
+
+.zse-search-box input {
+  width: 420px;
+  max-width: 70vw;
+  padding: 10px 34px 10px 14px;
+  border-radius: 999px;
+  border: 1px solid #444;
+  background-color: #050505;
+  color: #fff;
+  outline: none;
+  font-size: 14px;
+}
+
+.zse-search-box input::placeholder {
+  color: #666;
+}
+
+/* 검색어 지우기 버튼 */
+.zse-search-clear {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  color: #888;
+  font-size: 18px;
+  cursor: pointer;
+  display: none;
+}
+
+.zse-search-box.has-text .zse-search-clear {
+  display: block;
+}
+
+/* 업로드 버튼 */
+.zse-upload-button {
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  border: none;
+  background-color: #f97316;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.zse-upload-button img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+/* 업로드 모달 */
+.zse-upload-modal {
+  max-width: 480px;
+}
+
+.upload-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.zse-upload-desc {
+  font-size: 13px;
+  color: #bbb;
+  margin-bottom: 14px;
+}
+
+.zse-upload-label {
+  font-size: 13px;
+  margin: 8px 0 4px;
+}
+
+.zse-upload-select,
+.zse-upload-file {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background-color: #050505;
+  color: #fff;
+  font-size: 13px;
+}
+
+.zse-upload-file {
+  padding: 6px 8px;
+}
+
+.zse-upload-actions {
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.zse-upload-cancel,
+.zse-upload-confirm {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  border: none;
+  cursor: pointer;
+}
+
+.zse-upload-cancel {
+  background-color: #222;
+  color: #ddd;
+}
+
+.zse-upload-confirm {
+  background-color: #f97316;
+  color: #000;
+}
+
+.zse-upload-hint {
+  margin-top: 10px;
+  font-size: 11px;
+  color: #888;
+}
+
+/* 예측 결과 모달 / 카드 */
+.zse-predict-modal {
+  max-width: 640px;
+}
+
+.zse-predict-results {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.zse-predict-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #111;
+  border-radius: 14px;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: transform 0.16s ease, box-shadow 0.16s ease,
+    background-color 0.16s ease;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
+}
+
+.zse-predict-card:hover {
+  background-color: #1a1a1a;
+  transform: translateY(-2px);
+}
+
+/* 1위 카드 강조 */
+.zse-predict-card.top {
+  padding: 14px 16px;
+  transform: scale(1.05);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.6);
+}
+
+/* 썸네일 */
+.zse-predict-thumb {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background-color: #050505;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.zse-predict-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.zse-predict-card.top .zse-predict-thumb {
+  width: 96px;
+  height: 96px;
+}
+
+/* 텍스트 영역 */
+.zse-predict-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.zse-predict-name {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.zse-predict-sub {
+  font-size: 12px;
+  color: #999;
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .zse-predict-card {
+    padding: 9px 10px;
+  }
+
+  .zse-predict-card.top {
+    padding: 12px 12px;
+  }
+
+  .zse-predict-thumb {
+    width: 52px;
+    height: 52px;
+  }
+
+  .zse-predict-card.top .zse-predict-thumb {
+    width: 80px;
+    height: 80px;
+  }
+
+  .zse-predict-name {
+    font-size: 14px;
+  }
+}

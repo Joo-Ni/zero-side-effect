@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zero Side Effect | 제품 목록</title>
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/products.css" />
+  </head>
+  <body>
+    <div class="zse-page">
+      <header class="zse-header">
+        <div class="zse-logo-wrap">
+          <img
+            src="assets/logo_real_white.png"
+            alt="Zero Side Effect"
+            class="zse-logo"
+          />
+        </div>
+
+        <nav class="zse-nav">
+          <ul class="zse-nav-list">
+            <li class="zse-nav-item" id="nav-products">제품</li>
+            <li class="zse-nav-item" id="nav-category">카테고리</li>
+            <li class="zse-nav-item" id="nav-sweetener">대체당</li>
+          </ul>
+        </nav>
+
+        <div class="zse-submenu-wrapper">
+          <div id="category-submenu" class="zse-submenu"></div>
+          <div id="sweetener-submenu" class="zse-submenu"></div>
+        </div>
+      </header>
+
+      <main class="zse-main">
+        <section id="search-section" class="zse-search-section">
+          <div class="zse-search-inner">
+            <div class="zse-search-box">
+              <input
+                id="search-input"
+                type="text"
+                placeholder="제품명을 입력해 주세요 (예: 제로 콜라)"
+                autocomplete="off"
+              />
+              <button
+                id="search-clear"
+                class="zse-search-clear"
+                type="button"
+                aria-label="검색어 지우기"
+              >
+                ×
+              </button>
+            </div>
+            <button
+              id="upload-button"
+              class="zse-upload-button"
+              type="button"
+              aria-label="이미지 업로드"
+            >
+              <img src="assets/camera.png" alt="카메라 아이콘" />
+            </button>
+          </div>
+        </section>
+
+        <section class="zse-content-section">
+          <div id="product-grid" class="zse-product-grid"></div>
+          <div id="empty-message" class="zse-empty-message hidden">
+            조건에 맞는 제품을 찾지 못했습니다.
+          </div>
+        </section>
+      </main>
+
+      <footer class="zse-footer">© 2025 Zero Side Effect</footer>
+    </div>
+
+    <!-- 이미지 업로드 모달 -->
+    <div id="upload-modal-overlay" class="zse-modal-overlay hidden">
+      <div class="zse-modal zse-upload-modal">
+        <button
+          id="upload-modal-close"
+          class="zse-modal-close"
+          type="button"
+          aria-label="닫기"
+        >
+          ×
+        </button>
+        <div class="zse-modal-body upload-body">
+          <h3 class="zse-modal-title">이미지로 제품 찾기</h3>
+          <p class="zse-upload-desc">
+            먼저 제품 카테고리를 선택하고, 촬영한 이미지를 업로드해 주세요.
+          </p>
+
+          <label class="zse-upload-label" for="upload-category-select">
+            카테고리 선택
+          </label>
+          <select
+            id="upload-category-select"
+            class="zse-upload-select"
+          ></select>
+
+          <label class="zse-upload-label" for="upload-file-input">
+            이미지 파일
+          </label>
+          <input
+            id="upload-file-input"
+            class="zse-upload-file"
+            type="file"
+            accept="image/*"
+          />
+
+          <div class="zse-upload-actions">
+            <button
+              id="upload-cancel-btn"
+              class="zse-upload-cancel"
+              type="button"
+            >
+              취소
+            </button>
+            <button
+              id="upload-confirm-btn"
+              class="zse-upload-confirm"
+              type="button"
+            >
+              업로드
+            </button>
+          </div>
+          <p class="zse-upload-hint">
+            ※ 실제 인식 기능은 모델 연동 후 동작하도록 구성했습니다.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 예측 결과 모달 -->
+    <div id="predict-modal-overlay" class="zse-modal-overlay hidden">
+      <div class="zse-modal zse-predict-modal">
+        <button
+          id="predict-modal-close"
+          class="zse-modal-close"
+          type="button"
+          aria-label="닫기"
+        >
+          ×
+        </button>
+        <div class="zse-modal-body">
+          <h3 class="zse-modal-title">예측 결과</h3>
+          <p class="zse-upload-desc">
+            업로드한 이미지와 유사한 제품 목록입니다.
+          </p>
+          <div id="predict-results" class="zse-predict-results"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/global.js"></script>
+    <script src="js/products.js"></script>
+  </body>
+</html>

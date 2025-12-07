@@ -1,0 +1,16 @@
+.zse-sweetener-header {
+  max-width: 1100px;
+  margin: 0 auto 24px auto;
+  text-align: center;
+}
+
+.zse-sweetener-header h2 {
+  font-size: 22px;
+  margin-bottom: 8px;
+  color: #f97316;
+}
+
+.zse-sweetener-header p {
+  font-size: 14px;
+  color: #ccc;
+}

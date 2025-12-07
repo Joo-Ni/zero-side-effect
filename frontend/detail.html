@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zero Side Effect | 제품 상세</title>
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/detail.css" />
+  </head>
+  <body>
+    <div class="zse-page">
+      <header class="zse-header">
+        <div class="zse-logo-wrap">
+          <img
+            src="assets/logo_real_white.png"
+            alt="Zero Side Effect"
+            class="zse-logo"
+          />
+        </div>
+
+        <nav class="zse-nav">
+          <ul class="zse-nav-list">
+            <li class="zse-nav-item" id="nav-products">제품</li>
+            <li class="zse-nav-item" id="nav-category">카테고리</li>
+            <li class="zse-nav-item" id="nav-sweetener">대체당</li>
+          </ul>
+        </nav>
+
+        <div class="zse-submenu-wrapper">
+          <div id="category-submenu" class="zse-submenu"></div>
+          <div id="sweetener-submenu" class="zse-submenu"></div>
+        </div>
+      </header>
+
+      <main class="zse-main">
+        <section class="zse-detail-layout">
+          <div class="zse-detail-image-wrap">
+            <img
+              id="detail-product-img"
+              class="zse-detail-image"
+              alt="제품 이미지"
+            />
+          </div>
+
+          <div class="zse-detail-info">
+            <h2 id="detail-product-name" class="zse-detail-title"></h2>
+            <div id="detail-sweetener-tags" class="zse-tag-row"></div>
+
+            <div class="zse-detail-nutrition">
+              <h3>영양 성분</h3>
+              <div id="detail-nutrition-table" class="zse-nutrition-card"></div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="zse-footer">© 2025 Zero Side Effect</footer>
+    </div>
+
+    <script src="js/global.js"></script>
+    <script src="js/detail.js"></script>
+  </body>
+</html>

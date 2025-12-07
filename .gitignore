@@ -237,8 +237,12 @@ $RECYCLE.BIN/
 
 # settings
 settings.py
+.env
 
 # dataset
-models/
-dataset_naver/
-filtered_dataset/
+ignore/
+
+# backend inference model weights
+*.keras
+*.tflite
+*.h5

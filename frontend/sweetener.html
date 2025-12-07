@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zero Side Effect | 대체당</title>
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/sweetener.css" />
+  </head>
+  <body>
+    <div class="zse-page">
+      <header class="zse-header">
+        <div class="zse-logo-wrap">
+          <img
+            src="assets/logo_real_white.png"
+            alt="Zero Side Effect"
+            class="zse-logo"
+          />
+        </div>
+
+        <nav class="zse-nav">
+          <ul class="zse-nav-list">
+            <li class="zse-nav-item" id="nav-products">제품</li>
+            <li class="zse-nav-item" id="nav-category">카테고리</li>
+            <li class="zse-nav-item" id="nav-sweetener">대체당</li>
+          </ul>
+        </nav>
+
+        <div class="zse-submenu-wrapper">
+          <div id="category-submenu" class="zse-submenu"></div>
+          <div id="sweetener-submenu" class="zse-submenu"></div>
+        </div>
+      </header>
+
+      <main class="zse-main">
+        <section class="zse-sweetener-header">
+          <h2 id="sweetener-title"></h2>
+          <p id="sweetener-desc"></p>
+        </section>
+
+        <section class="zse-content-section">
+          <div id="product-grid" class="zse-product-grid"></div>
+          <div id="empty-message" class="zse-empty-message hidden">
+            이 대체당이 포함된 제품이 없습니다.
+          </div>
+        </section>
+      </main>
+
+      <footer class="zse-footer">© 2025 Zero Side Effect</footer>
+    </div>
+
+    <script src="js/global.js"></script>
+    <script src="js/sweetener.js"></script>
+  </body>
+</html>

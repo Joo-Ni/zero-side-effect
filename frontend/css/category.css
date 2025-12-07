@@ -1,0 +1,14 @@
+.zse-category-header {
+  max-width: 1100px;
+  margin: 0 auto 24px auto;
+}
+
+.zse-category-header h2 {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.zse-category-header p {
+  font-size: 14px;
+  color: #ccc;
+}

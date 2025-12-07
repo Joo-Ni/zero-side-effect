@@ -1,0 +1,16 @@
+# Zero Side Effect backend dependencies
+
+fastapi
+uvicorn[standard]
+
+sqlalchemy
+pymysql
+
+pydantic
+pydantic-settings
+
+python-multipart
+
+numpy
+Pillow
+tensorflow
