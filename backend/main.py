@@ -47,3 +47,21 @@ app.include_router(predict.router)
 def root():
     index_file = FRONTEND_DIR / "index.html"
     return FileResponse(index_file)
+
+
+# 카테고리 페이지
+@app.get("/category.html", include_in_schema=False)
+def category_page():
+    return FileResponse(FRONTEND_DIR / "category.html")
+
+
+# 대체당(스위트너) 페이지
+@app.get("/sweetener.html", include_in_schema=False)
+def sweetener_page():
+    return FileResponse(FRONTEND_DIR / "sweetener.html")
+
+
+# 상세 페이지
+@app.get("/detail.html", include_in_schema=False)
+def detail_page():
+    return FileResponse(FRONTEND_DIR / "detail.html")
