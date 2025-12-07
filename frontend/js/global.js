@@ -2,11 +2,18 @@ const API_BASE = "";
 window.API_BASE = API_BASE;
 
 function buildApiUrl(path) {
+  if (!path) return "";
+
   if (path.startsWith("http://") || path.startsWith("https://")) {
-    return path;
+    try {
+      const u = new URL(path);
+      return u.pathname + u.search;
+    } catch {
+      return path;
+    }
   }
-  const clean = path.replace(/^\/+/, "");
-  return clean;
+
+  return path.replace(/^\/+/, "/");
 }
 
 async function fetchJSON(path) {
@@ -25,15 +32,6 @@ function normalizeText(str) {
     .toLowerCase()
     .replace(/\s+/g, "")
     .replace(/[^0-9a-z가-힣]/g, "");
-}
-
-async function fetchJSON(url) {
-  const res = await fetch(url);
-  if (!res.ok) {
-    console.error("API error:", url, res.status);
-    throw new Error("API error");
-  }
-  return await res.json();
 }
 
 function getQueryParam(key) {
@@ -63,7 +61,8 @@ function renderProductCards(products, container, onClickProduct) {
     img.className = "zse-card-thumb-img";
 
     if (p.image_url) {
-      img.src = p.image_url.startsWith("http") ? p.image_url : p.image_url;
+      const imgUrl = buildApiUrl(p.image_url);
+      img.src = imgUrl || "assets/no-image.png";
     } else {
       img.src = "assets/no-image.png";
     }

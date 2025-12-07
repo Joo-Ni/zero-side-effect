@@ -31,9 +31,8 @@ function fillDetail(prod) {
 
   if (img) {
     if (prod.image_url) {
-      img.src = prod.image_url.startsWith("http")
-        ? prod.image_url
-        : prod.image_url;
+      const imgUrl = buildApiUrl(prod.image_url);
+      img.src = imgUrl || "assets/no-image.png";
     } else {
       img.src = "assets/no-image.png";
     }

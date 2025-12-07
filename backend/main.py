@@ -48,6 +48,10 @@ def root():
     index_file = FRONTEND_DIR / "index.html"
     return FileResponse(index_file)
 
+@app.get("/index.html", include_in_schema=False)
+def index_alias():
+    return FileResponse(FRONTEND_DIR / "index.html")
+
 
 # 카테고리 페이지
 @app.get("/category.html", include_in_schema=False)
