@@ -10,9 +10,9 @@ const catEmpty = document.getElementById("empty-message");
 async function initCategoryPage() {
   try {
     const [products, cats, sweets] = await Promise.all([
-      fetchJSON(`${API_BASE}/products`),
-      fetchJSON(`${API_BASE}/categories`),
-      fetchJSON(`${API_BASE}/sweeteners`),
+      fetchJSON("products"),
+      fetchJSON("categories"),
+      fetchJSON("sweeteners"),
     ]);
 
     allProducts_cat = products;

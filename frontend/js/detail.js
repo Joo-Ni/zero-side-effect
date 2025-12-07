@@ -11,9 +11,9 @@ async function initDetailPage() {
     }
 
     const [prodFull, cats, sweets] = await Promise.all([
-      fetchJSON(`${API_BASE}/products/${id}/full`),
-      fetchJSON(`${API_BASE}/categories`),
-      fetchJSON(`${API_BASE}/sweeteners`),
+      fetchJSON(`products/${id}/full`),
+      fetchJSON("categories"),
+      fetchJSON("sweeteners"),
     ]);
 
     const sweetNames = ["알룰로오스", "에리스리톨", "당알코올"];
@@ -31,7 +31,9 @@ function fillDetail(prod) {
 
   if (img) {
     if (prod.image_url) {
-      img.src = `http://127.0.0.1:8000${prod.image_url}`;
+      img.src = prod.image_url.startsWith("http")
+        ? prod.image_url
+        : prod.image_url;
     } else {
       img.src = "assets/no-image.png";
     }

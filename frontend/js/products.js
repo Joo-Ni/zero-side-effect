@@ -24,9 +24,9 @@ const predictResults = document.getElementById("predict-results");
 async function initProductsPage() {
   try {
     const [products, cats, sweets] = await Promise.all([
-      fetchJSON(`${API_BASE}/products`),
-      fetchJSON(`${API_BASE}/categories`),
-      fetchJSON(`${API_BASE}/sweeteners`),
+      fetchJSON("products"),
+      fetchJSON("categories"),
+      fetchJSON("sweeteners"),
     ]);
 
     allProducts = products;
@@ -112,7 +112,7 @@ function initSearch() {
     uploadConfirmBtn.textContent = "분석 중...";
 
     try {
-      const res = await fetch(`${API_BASE}/predict`, {
+      const res = await fetch("predict", {
         method: "POST",
         body: formData,
       });
@@ -176,10 +176,9 @@ function openPredictModal(results) {
     if (item.product_id) {
       const p = allProducts.find((x) => x.id === item.product_id);
       if (p && p.image_url) {
-        const base = window.API_BASE || "http://127.0.0.1:8000";
-        imgSrc = p.image_url.startsWith("http")
-          ? p.image_url
-          : `${base}${p.image_url}`;
+        if (p && p.image_url) {
+          imgSrc = p.image_url;
+        }
       }
     }
     img.src = imgSrc;

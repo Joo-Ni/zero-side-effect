@@ -1,4 +1,23 @@
-const API_BASE = "http://127.0.0.1:8000";
+const API_BASE = "";
+window.API_BASE = API_BASE;
+
+function buildApiUrl(path) {
+  if (path.startsWith("http://") || path.startsWith("https://")) {
+    return path;
+  }
+  const clean = path.replace(/^\/+/, "");
+  return clean;
+}
+
+async function fetchJSON(path) {
+  const url = buildApiUrl(path);
+  const res = await fetch(url);
+  if (!res.ok) {
+    console.error("API error:", url, res.status);
+    throw new Error("API error");
+  }
+  return await res.json();
+}
 
 function normalizeText(str) {
   if (!str) return "";
@@ -44,7 +63,7 @@ function renderProductCards(products, container, onClickProduct) {
     img.className = "zse-card-thumb-img";
 
     if (p.image_url) {
-      img.src = `http://127.0.0.1:8000${p.image_url}`;
+      img.src = p.image_url.startsWith("http") ? p.image_url : p.image_url;
     } else {
       img.src = "assets/no-image.png";
     }
